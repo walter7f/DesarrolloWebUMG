@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad</title>
     <script>
+        name=document.formValida.nombre.value;
+        email=document.formValida.correo.value;
+
         function validar(){
           //Validar nombre
-          if (document.formValida.nombre.value.length <= 5){
+          if (name.length <= 5){
             alert("Ingrese un nombre valido.")
             document.formValida.nombre.focus()
             return 0;
           }
   
           //Validar correo
-          if (document.formValida.correo.value.length <= 5){
+          if (email.length <= 5){
             alert("Ingrese un correo valido.")
             document.formValida.correo.focus()
             return 0;
