@@ -26,9 +26,15 @@
           document.formValida.submit();
         }
       </script> 
+      <style>
+        .card{
+            display:flex;
+        }
+      </style>
 </head>
 
 <body>
+    <div class="card">
     <form name="formValida">
     <table>
         <tr>
@@ -65,7 +71,35 @@
     </table>
 
 </form>
+</div>
 
+<div class="card">
+    <form name="formValida">
+        <table>
+            <tr>
+                <th>Ingresa tu numero de targeta:</th>
+                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+            </tr>
+            <tr>
+                <th>Ingresa fecha de Vencimiento:</th>
+                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+            </tr>
+    
+            <tr>
+                <th>Ingresa el CVV:</th>
+                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+            </tr>
+
+                <td colspan="2" align="center">
+                    <input type="button" value="Enviar" onclick="validar();">
+                </td>
+            </tr>
+        </table>
+    
+    </form>
+
+
+</div>
 </body>
 
 </html>
