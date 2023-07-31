@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad</title>
     <script>
-        name=document.formValida.nombre.value;
-        email=document.formValida.correo.value;
+        var name=document.formValida.nombre.value;
+        var direc = document.formValida.direccion.value;
 
         function validar(){
           //Validar nombre
@@ -18,7 +15,7 @@
           }
   
           //Validar correo
-          if (email.length <= 5){
+          if (direc.length <= 5){
             alert("Ingrese un correo valido.")
             document.formValida.correo.focus()
             return 0;
@@ -29,80 +26,84 @@
           document.formValida.submit();
         }
       </script> 
-      <style>
-        .card{
-            display:flex;
-        }
-      </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+    width: 50vh;
+    height: 50vh;
+      display: inline-block;
+      margin: 30 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="card">
-    <form name="formValida">
-    <table>
-        <tr>
-            <th>Nombre:</th>
-            <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-        </tr>
-        <tr>
-            <th>Fecha de Nacimiento:</th>
-            <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-        </tr>
-
-        <tr>
-            <th>Direccion:</th>
-            <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-        </tr>
-
-        <tr>
-            <th>Telefono:</th>
-            <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-          </tr>
-        <tr>
-            <th>Email:</th>
-            <td><input type="text" name="correo" size="30" maxlength="100"></td>
-        </tr>
-        <tr>
-            <th>Sexo:</th>
-            <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-          </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="button" value="Enviar" onclick="validar();">
-            </td>
-        </tr>
-    </table>
-
-</form>
-</div>
-
-<div class="card">
-    <form name="formValida">
-        <table>
-            <tr>
-                <th>Ingresa tu numero de targeta:</th>
-                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-            </tr>
-            <tr>
-                <th>Ingresa fecha de Vencimiento:</th>
-                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-            </tr>
+    <form onsubmit="return validar()">
+        <h2>Datos Generales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
     
-            <tr>
-                <th>Ingresa el CVV:</th>
-                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
-            </tr>
-
-                <td colspan="2" align="center">
-                    <input type="button" value="Enviar" onclick="validar();">
-                </td>
-            </tr>
-        </table>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
     
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+    
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+    
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="sexoM" name="sexo" value="Masculino" required>
+        <label for="sexoM">Masculino</label>
+        <input type="radio" id="sexoF" name="sexo" value="Femenino" required>
+        <label for="sexoF">Femenino</label>
     </form>
-
-
-</div>
+    <form>
+        <h2>Datos para Pago con Tarjeta</h2>
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+    
+        <label for="nombreTarjeta">Nombre en la Tarjeta:</label>
+        <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+    
+        <label for="fechaExpiracion">Fecha de Expiración:</label>
+        <input type="text" id="fechaExpiracion" name="fechaExpiracion" placeholder="MM/AA" required>
+    
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+    
+        <button type="submit">Enviar</button>
+      </form>
+    
 </body>
 
 </html>
