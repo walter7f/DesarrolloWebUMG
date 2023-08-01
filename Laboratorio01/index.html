@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div>
+        <div class="form1">
+        <form onsubmit="return validarFormulario()">
+        <h2>Datos Generales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="sexoM" name="sexo" value="Masculino" required>
+        <label for="sexoM">Masculino</label>
+        <input type="radio" id="sexoF" name="sexo" value="Femenino" required>
+        <label for="sexoF">Femenino</label>
+        </div>
+
+        <div class="form2">
+        <h2>Pago con Tarjeta</h2>
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+    
+        <label for="nombreTarjeta">Nombre en la Tarjeta:</label>
+        <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+        
+        <label for="fechaExpiracion">Fecha de Expiración:</label>
+        <input type="text" id="fechaExpiracion" name="fechaExpiracion" placeholder="MM/AA" required>
+        
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+        
+        <button type="submit">Enviar</button>
+        <div id="errorMessages" class="error-message"></div>
+        </form>    
+        </div>
+
+
+    </div> 
+    
+    <script src="script.js"></script>
+</body>
+</html>

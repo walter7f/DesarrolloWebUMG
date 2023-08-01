@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .form1 {
+    position:absolute;
+    margin: 90px;
+    width: 500px;
+    height: 450px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+  }
+  .form2 {
+    position:absolute;
+    margin: 90px;
+    width: 500px;
+    height: 450px;
+    padding: 40px;
+    top: 39%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .error-message {
+    color: red;
+  }
