@@ -1,0 +1,109 @@
+
+<html>
+<head>
+    <title>Actividad</title>
+    <script>
+        var name=document.formValida.nombre.value;
+        var direc = document.formValida.direccion.value;
+
+        function validar(){
+          //Validar nombre
+          if (name.length <= 5){
+            alert("Ingrese un nombre valido.")
+            document.formValida.nombre.focus()
+            return 0;
+          }
+  
+          //Validar correo
+          if (direc.length <= 5){
+            alert("Ingrese un correo valido.")
+            document.formValida.correo.focus()
+            return 0;
+          }
+                  
+          //Envia formulario
+          alert("Muchas gracias por enviar el formulario");
+          document.formValida.submit();
+        }
+      </script> 
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+    width: 50vh;
+    height: 50vh;
+      display: inline-block;
+      margin: 30 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+    <form onsubmit="return validar()">
+        <h2>Datos Generales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+    
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+    
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+    
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="sexoM" name="sexo" value="Masculino" required>
+        <label for="sexoM">Masculino</label>
+        <input type="radio" id="sexoF" name="sexo" value="Femenino" required>
+        <label for="sexoF">Femenino</label>
+    </form>
+    <form>
+        <h2>Datos para Pago con Tarjeta</h2>
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+    
+        <label for="nombreTarjeta">Nombre en la Tarjeta:</label>
+        <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+    
+        <label for="fechaExpiracion">Fecha de Expiración:</label>
+        <input type="text" id="fechaExpiracion" name="fechaExpiracion" placeholder="MM/AA" required>
+    
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+    
+        <button type="submit">Enviar</button>
+      </form>
+    
+</body>
+
+</html>
