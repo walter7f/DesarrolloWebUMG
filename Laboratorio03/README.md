@@ -1,5 +1,14 @@
-# Primer proyecto Desarrollo web 
-## Universidad Mariano galvez de Guatemala 
+# Universidad Mariano Galvez De Guatemala
+# Sede de Antigua Guatemala 
 
-# Grupo 5.
-## Walter Diaz.
+## Laboratorio 03
+##  PHP y XAMP
+## Grupo No. 5
+
+Walter Franscisco Diaz Morales 2294-20-14526
+
+Edgar Alfredo Casuy Reyes 2294-20-16144
+
+Johan Enrique Aspuac López 2294-20-17657
+
+Débora Victoria Chajón Gonzalez  2294-20-22991
