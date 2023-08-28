@@ -112,9 +112,6 @@
         </div>
     <?php } ?>
 </div>
-
-            
-
         <!--<div class="box-container">
             <div class="box">
                 <img src="imges/item3.jpg" alt="">

@@ -1,8 +1,8 @@
 # Universidad Mariano Galvez De Guatemala
 # Sede de Antigua Guatemala 
 
-## Laboratorio 03
-##  PHP y XAMP
+## Laboratorio 04
+##  PHP, XAMP, MY SQL
 ## Grupo No. 5
 
 Walter Franscisco Diaz Morales 2294-20-14526

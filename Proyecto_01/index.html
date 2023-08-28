@@ -25,6 +25,7 @@
             <a href="#menu2">Menu</a>
             <a href="#vision">Vision-Mision</a>
             <a href="#contactos">Contactos</a>
+            <i class="fas fa-shopping-cart icon" style="font-size: 40px;"></i>
         </nav>
 
     </header>
@@ -89,71 +90,83 @@
             </div>
         </div>
     </section>
-    <section class="menu2" id="menu2">
+    <section class="menu2" id="menu2" onscroll="movePopup()">
         <h1 class="heading">Nuestro<span> Menu</span></h1>
         <div class="box-container">
             <div class="box">
                 <img src="imges/item3.jpg" alt="">
                 <h3>Cafe Expreso Doble</h3>
-                <div class="price">Q 10.00</div>>
+                <div class="price">Q 10.00</div>
+                <a href="#menu2" class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
 
             <div class="box">
                 <img src="imges/pp1.jfif" alt="">
                 <h3>Cafe Expreso</h3>
                 <div class="price">Q 15.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon" onclick="openPopup()"></i></a>
             </div>
 
             <div class="box">
                 <img src="imges/pp.2.jpg" alt="">
                 <h3>Cafe Late</h3>
                 <div class="price">Q 20.00</div>
+                <a href="#menu2" class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <!-- agregar todo lo posible-->
             <div class="box">
                 <img src="imges/pp3.jfif" alt="">
                 <h3>Capuchino</h3>
                 <div class="price">Q 20.00</div>
+                <a href="#menu2" class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/pp.4.jpg" alt="">
                 <h3>Cafe Cacao</h3>
                 <div class="price">Q 25.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/pp5.jpeg" alt="">
                 <h3>Cafe Cacao Simple</h3>
                 <div class="price">Q 20.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/b1.jfif" alt="">
                 <h3> Pastel de Mora</h3>
                 <div class="price">Q 20.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/b2.jfif" alt="">
                 <h3>Pan de Chocolate</h3>
                 <div class="price">Q 15.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/b7.jpg" alt="">
                 <h3>Mega Crepas</h3>
                 <div class="price">Q 30.00</div>
+                <a class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/b4.jpg" alt="">
                 <h3>Toreja</h3>
                 <div class="price">Q 10.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a> 
             </div>
             <div class="box">
                 <img src="imges/b5.jpg" alt="">
                 <h3>Panqueque</h3>
                 <div class="price">Q 25.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
             <div class="box">
                 <img src="imges/b6.jpg" alt="">
                 <h3>Crepa Simple</h3>
                 <div class="price">Q 30.00</div>
+                <a  class="btn2">Añadir al carito <i class="fas fa-shopping-cart icon"onclick="openPopup()"></i></a>
             </div>
 
         </div>
@@ -181,7 +194,21 @@
 
 
     </div>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts.js"></script>
+    <div class="popup" id="popup">
+        <h2>Carrito de Compras</h2>
+        <div class="product">
+          <p>Artículo: Nombre del Artículo</p>
+          <div>
+            <i class="fas fa-minus-circle delete-icon" onclick="removeProduct()"></i>
+            <span id="product-count">1</span> unidad
+          </div>
+        </div>
+        <button onclick="simulatePayment()">Pagar</button>
+        <button onclick="closePopup()">Cerrar</button>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 
 </html>

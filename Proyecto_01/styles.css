@@ -15,6 +15,7 @@ body {
   text-decoration: none;
   transition: 0.2s linear;
   background: #010103;
+  position: relative;
 }
 
 html {
@@ -67,8 +68,19 @@ section {
   cursor: pointer;
   border-radius: 15px;
 }
+
 .btn:hover {
   letter-spacing: 0.2rem;
+}
+.btn2 {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.7rem 3rem;
+  font-size: 1.7rem;
+  color: white;
+  background: #5a3102;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 .header {
@@ -323,3 +335,36 @@ section {
 .contactos .form_c .wh img {
   height: 15rem;
 }/*# sourceMappingURL=styles.css.map */
+
+.popup {
+  display: none;
+  position: absolute; /* Cambia a posición absoluta */
+  top: 50%;
+  left: 50%;
+  width: 20rem auto;
+  height: 15rem auto;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #f07d0a;
+  background-color: #2d1d0e;
+  z-index: 1000; /* Mayor z-index para que aparezca sobre todos los demás elementos */
+  border-radius:15% ;
+  color: #eee;
+}
+.cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  font-size: 18px;
+}
