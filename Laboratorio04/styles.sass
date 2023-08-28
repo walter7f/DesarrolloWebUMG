@@ -1,0 +1,287 @@
+$fondo:#010103
+$black: #13131a
+$main-color: #d3ad7f
+$bg: #010103
+$border:  .1rem solid rgba(255, 255, 255, 0.3)
+
+root 
+    --main-color: #d3ad7f
+    --black: #13131a
+    --bg: #010103
+    --border: .1rem solid rgba(255, 255, 255, 0.3)
+
+body
+    font-family: 'Roboto', sans-serif
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    border: none
+    text-decoration: none
+    transition: .2s linear
+    background: $fondo
+
+
+
+html 
+    font-size: 62.5%
+    scroll-padding-top: 9rem
+    scroll-behavior: smooth
+
+
+html::-webkit-scrollbar 
+    width: .8rem
+
+
+html::-webkit-scrollbar-track 
+    background: transparent
+
+
+html::-webkit-scrollbar-thumb 
+    background: #ffff
+    border-radius: 5rem
+
+
+
+section
+  padding-top: 6rem
+  padding-left: 7%
+  padding-right: 7%
+  position: static
+  width: auto
+  height: auto
+
+.heading
+  text-align: center
+  color: white
+  text-transform: uppercase
+  padding-bottom: 3.5rem
+  font-size: 4rem
+  span
+    color: $main-color
+    text-transform: uppercase
+
+.btn
+  margin-top: 1rem
+  display: inline-block
+  padding: 0.7rem 3rem
+  font-size: 1.7rem
+  color: white
+  background: $main-color
+  cursor: pointer
+  border-radius: 15px
+  &:hover
+    letter-spacing: 0.2rem
+
+.header
+  background: $bg
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  padding: 1.5rem 7%
+  border-bottom: $border
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1000
+  color: #765326
+  .logo img
+    height: 10rem
+  .navbar a
+    margin: 0 1rem
+    font-size: 2rem
+    color: #ffff
+    &:hover
+      color: $main-color
+      border-bottom: 0.1rem solid $main-color
+      padding-bottom: 0.5rem
+  .cart-item-container
+    position: absolute
+    top: 100%
+    right: -100%
+    height: calc(100vh - 9.5rem)
+    width: 35rem
+    background: rgb(41, 17, 17)
+    padding: 0 1.5rem
+    &.active
+      right: 0
+    .cart-item
+      position: relative
+      margin: 2rem 0
+      display: flex
+      align-items: center
+      gap: 1.5rem
+      .fa-times
+        position: relative
+        top: 1rem
+        right: 1rem
+        font-size: 2rem
+        cursor: pointer
+        color: var(--black)
+        &:hover
+          color: $main-color
+      img
+        height: 7rem
+      .content h3
+        font-size: 2rem
+        color: white
+        padding-bottom: 0.5rem
+      .content .price
+        font-size: 1.5rem
+        color: $main-color
+      .btn
+        width: 100%
+        text-align: center
+
+
+
+
+.home
+  min-height: 100vh
+  display: flex
+  align-items: center
+  background: url(./imges/p2.jpg) no-repeat
+  background-size: cover
+  background-position: center
+  .content
+    max-width: 60rem
+    h3
+      font-size: 6rem
+      text-transform: uppercase
+      color: #ffff
+    p
+      font-size: 2rem
+      font-weight: lighter
+      line-height: 1.8
+      padding: 1rem 0
+      color: #eee
+
+.menu
+  .row
+    display: flex
+    align-items: center
+    background: $black
+    flex-wrap: wrap
+    .image
+      flex: 1 1 45rem
+      img
+        width: 100%
+    .content
+      flex: 1 1 45rem
+      padding: 2rem
+      h3
+        font-size: 3rem
+        color: white
+      p
+        font-size: 1.6rem
+        color: #cccc
+        padding: 1rem 0
+        line-height: 1.8
+    
+.vision
+  .row
+    display: flex
+    align-items: center
+    background: $black
+    flex-wrap: wrap
+    .image
+      flex: 1 1 45rem
+      img
+        width: 100%
+    .content
+      flex: 1 1 45rem
+      padding: 2rem
+      h3
+        font-size: 3rem
+        color: white
+      p
+        font-size: 1.6rem
+        color: #cccc
+        padding: 1rem 0
+        line-height: 1.8
+
+
+.menu2
+  .box-container
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    gap: 1.5rem
+  .box-container .box
+    padding: 5rem
+    text-align: center
+    border: $border
+    border-color: #765326
+    border-radius: 15px
+    border-width: 10px
+    img
+      height: 13rem
+    h3
+      color: white
+      font-size: 2rem
+      padding: 1rem 0
+    .price
+      color: white
+      font-size: 2.5rem
+      padding: 1rem 0
+      span
+        font-size: 1.5rem
+        text-decoration: line-through
+    &:hover
+      background-color: #f4ac4e
+      * 
+        color: $black
+
+.contactos
+  .row
+    display: flex
+    height: 50vh
+    height: 100vh
+    background: $black
+    flex-wrap: wrap
+    gap: 1rem
+    padding: 4rem 4rem 4rem
+    .map
+      flex: 1 1 45rem
+      width: 100%
+      height: 70%
+      padding-right: 4rem
+      object-fit: cover
+      border-radius: 40px
+    form
+      flex: 1 1 45rem
+      padding: 5rem 2rem
+      text-align: center
+      h3
+        text-transform: uppercase
+        font-size: 3rem
+        color: white
+      h4
+        font-size: 3rem
+        color: darkgoldenrod
+      .inputBox
+        display: flex
+        align-items: center
+        margin-top: 2rem
+        margin-bottom: 2rem
+        background: $bg
+        border: $border
+        span
+          color: white
+          font-size: 2rem
+          padding-left: 2rem
+        input
+          width: 100%
+          padding: 2rem
+          font-size: 1.7rem
+          color: #ffff
+          text-transform: none
+          background: none
+  .form_c
+    width: 30rem
+    height: 70%
+    background: rgba(249, 176, 18, 0.2)
+    border-radius: 20px
+    .wh img
+      height: 15rem

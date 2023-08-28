@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: verdana;
+}
+
+.container{
+    /* border: 3px solid red; */
+    max-width: 90%;
+    margin: 30px;
+    margin-top: 20px;
+}
+
+:root{
+    --cfondoForm1: #f7ebdd;
+    --cfondoForm2: #D39B5E;
+    --cnegro: black;
+    --ctexto: rgb(9, 39, 43);
+    --cblanco: white; 
+    --ctextoDark: rgb(1, 35, 39);
+}
+
+.titulo{
+        font-weight: bold;
+        font-size: 25px;
+        margin:  0;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+        color: rgb(32, 49, 51);
+    }
+
+.form-input{
+  /* border: 3px solid red; */
+ margin-bottom: 30px;   
+}
+
+
+
+.form{
+    /* border: 3px solid green; */
+    border-top: 2px var(--cnegro);
+    max-width: 400px;
+    padding: 40px 40px;
+    margin: auto;
+    margin-top: 50px;
+    background: linear-gradient(
+        0deg,
+        var(--cfondoForm1)0%,
+        var(--cfondoForm2)70%);
+        border-radius: 15px;    
+}
+
+.form-input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid var(--ctexto);
+
+}
+
+.form-input input:focus + label{
+    font-weight: bold;
+    color: var(--cnegro) ;
+}
+
+.form-input label{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--ctexto);
+}
+
+.send input{
+    background-color: var(--cnegro);
+    color: var(--cblanco);
+    padding: 10px 30px;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    border: none;
+}
+
+.send input:hover{
+    background: var(--ctextoDark);
+    transition: 0.5s;
+}
+
+.li-a{
+    color: rgb(11, 64, 70);
+    font-size: 15px;
+    padding: 10px 5px;
+}
+
+.a{
+    color: rgb(9, 54, 59);
+    font-size: 15px;
+    padding: 10px 5px;
+}
