@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AspNetWebApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AlumnosG5">
+          <Key>
+            <PropertyRef Name="PersonIdG5" />
+          </Key>
+          <Property Name="PersonIdG5" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Carnet" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="82" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="82" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="16" />
+          <Property Name="Sede" Type="nvarchar" MaxLength="282" />
+          <Property Name="Plan" Type="nvarchar" MaxLength="8" />
+          <Property Name="Centro_educativo" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonId" />
+          </Key>
+          <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="82" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="82" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="16" />
+          <Property Name="Address" Type="nvarchar" MaxLength="282" />
+          <Property Name="BloodType" Type="nvarchar" MaxLength="8" />
+          <Property Name="CreationDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'db_9d664d_devweb.dbo.VersionInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityContainer Name="AspNetWebApplicationModelStoreContainer">
+          <EntitySet Name="AlumnosG5" EntityType="Self.AlumnosG5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AspNetWebApplicationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AspNetWebApplicationEntities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" >
+          <EntitySet Name="People" EntityType="AspNetWebApplicationModel.Person" />
+          <EntitySet Name="AlumnosG5" EntityType="AspNetWebApplicationModel.AlumnosG5" />
+        </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonId" />
+          </Key>
+          <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="82" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="82" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="282" FixedLength="false" Unicode="true" />
+          <Property Name="BloodType" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="AlumnosG5">
+          <Key>
+            <PropertyRef Name="PersonIdG5" />
+          </Key>
+          <Property Name="PersonIdG5" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Carnet" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="82" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="82" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Sede" Type="String" MaxLength="282" FixedLength="false" Unicode="true" />
+          <Property Name="Plan" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Centro_educativo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AspNetWebApplicationModelStoreContainer" CdmEntityContainer="AspNetWebApplicationEntities" >
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="AspNetWebApplicationModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlumnosG5">
+            <EntityTypeMapping TypeName="AspNetWebApplicationModel.AlumnosG5">
+              <MappingFragment StoreEntitySet="AlumnosG5">
+                <ScalarProperty Name="Centro_educativo" ColumnName="Centro_educativo" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="Sede" ColumnName="Sede" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Carnet" ColumnName="Carnet" />
+                <ScalarProperty Name="PersonIdG5" ColumnName="PersonIdG5" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
