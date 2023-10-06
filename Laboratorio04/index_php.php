@@ -115,15 +115,16 @@
                 <?php } ?>
             </div>
             <div class="box-container">
-    <?php
+   
+            <?php
     // Datos de conexión a la base de datos
-    $servername = "MYSQL5049.site4now.net";
-    $dbname = "db_9d664d_devweb";
-    $username = "9d664d_devweb";
-    $password = "d354rr0LloW3bUm6";
-
+    $servidor = "localhost";
+    $usuario = "root";
+    $clave = "";
+    $baseDatos = "cafe";
+    
     // Crear la conexión
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servidor, $usuario, $clave, $baseDatos);
 
     // Verificar la conexión
     if ($conn->connect_error) {
@@ -131,18 +132,17 @@
     }
 
     // Consulta SQL
-    $sql = "SELECT `Carne`, `Nombres`, `Apellidos`, `Sexo`, `FechaNacimiento`
-            FROM `estudiante` WHERE 1;";
+    $sql = "SELECT `producto`, `precio`
+            FROM `venta` WHERE 1;";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             ?>
             <div class="box">
-                <h1 class="heading">Nuestro<span> Cliente </span></h1>
-                <h3><?php echo $row['Nombres'] . " " . $row['Apellidos']; ?></h3>
-                <p>Carne: <?php echo $row['Carne']; ?></p>
-                <p>Sexo: <?php echo ($row['Sexo'] == 1 ? "Masculino" : "Femenino"); ?></p>
+                <h1 class="heading">Nuestros<span> Productos</span></h1>
+                <h3><?php echo $row['producto'] . " " . $row['precio']; ?></h3>
+               
                 <!-- Agrega aquí más información que quieras mostrar -->
             </div>
             <?php
